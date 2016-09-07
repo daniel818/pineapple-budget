@@ -1,0 +1,20 @@
+<div >
+
+    <div>
+
+        <select [ngModel]="crtRoomate1" (ngModelChange)="onChangeObj1($event)" name="sel3">
+            <option   [ngValue]="roomate" *ngFor="let roomate of roomates" >{{roomate .name}}</option>
+
+        </select>
+
+        <p>pays to:</p>
+
+        <select [ngModel]="crtRoomate2" (ngModelChange)="onChangeObj2($event)" name="sel3">
+            <option [ngValue]="roomate" *ngFor="let roomate of roomates" >{{roomate .name}}</option>
+        </select>
+
+        <input #money placeholder="money" />
+        <button (click)="calc(crtRoomate1,crtRoomate2,money.value)">Add</button>
+    </div>
+
+</div>

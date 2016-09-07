@@ -1,0 +1,36 @@
+<div >
+
+  <div>
+      <!--
+              <select [ngModel]="selectRoomate" (ngModelChange)="onChangeObj($event)" name="sel2">
+                  <option [ngValue]="roomate" *ngFor="let roomate of roomates" >{{roomate .name}}</option>
+              </select> -->
+
+
+
+        <div *ngIf="roomate">
+
+            <h2>{{roomate.name}} Details!</h2>
+
+            <div>
+                <label>name: </label>
+                <input [(ngModel)]="roomate.name" placeholder="name"/>
+            </div>
+
+            <button (click)="getDetails(selectRoomate)">Details</button>
+
+            <ul> I Pay to:
+                <li *ngFor="let paym of iPayRoomates" >{{paym.name}}  {{paym.money}}</li>
+            </ul>
+
+            <ul> Pay Me:
+                <li *ngFor="let paym of payMeRoomates" >{{paym.name}}  {{paym.money}}</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <button (click)="goBack()">Back</button>
+
+
+</div>

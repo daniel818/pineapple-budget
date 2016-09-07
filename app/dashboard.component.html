@@ -1,0 +1,16 @@
+<h3>Roomates</h3>
+<div class="list-group">
+
+    <div class="list-group-item list-group-item-action" *ngFor="let roomate of roomates" (click)="gotoDetail(roomate)">
+        <div class="module hero">
+            <h4>{{roomate.name}}</h4>
+        </div>
+    </div>
+
+   <!-- <div *ngIf="roomate">
+        <h2>
+            {{roomate.name | uppercase}} is my roomate
+        </h2>
+        <button (click)="gotoDetail()">View Details</button>
+    </div> -->
+</div>
